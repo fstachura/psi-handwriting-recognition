@@ -22,9 +22,21 @@ def load_emnist_mnist(d):
     y_test = load_emnist_y(os.path.join(d, "emnist-mnist-test-labels-idx1-ubyte"))
     return X_train, X_test, y_train, y_test
 
+def load_emnist_letters(d):
+    X_train = load_emnist_x(os.path.join(d, "emnist-letters-train-images-idx3-ubyte"))
+    X_test = load_emnist_x(os.path.join(d, "emnist-letters-test-images-idx3-ubyte"))
+    y_train = load_emnist_y(os.path.join(d, "emnist-letters-train-labels-idx1-ubyte"))
+    y_test = load_emnist_y(os.path.join(d, "emnist-letters-test-labels-idx1-ubyte"))
+    return X_train, X_test, y_train, y_test
+
 if __name__ == "__main__":
     from utils import plot_mnist
-    X_train, X_test, y_train, y_test = load_emnist_mnist("emnist")
+    X_train, X_test, y_train, y_test = load_emnist_mnist("emnist_mnist")
+    print(X_train.shape, y_train.shape, X_test.shape, y_test.shape)
+    plot_mnist(X_train, y_train)
+    plot_mnist(X_test, y_test)
+
+    X_train, X_test, y_train, y_test = load_emnist_letters("emnist_letters")
     print(X_train.shape, y_train.shape, X_test.shape, y_test.shape)
     plot_mnist(X_train, y_train)
     plot_mnist(X_test, y_test)
