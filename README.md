@@ -1,5 +1,7 @@
 # Handwriting recognition 
 
+This project aims to create a model that recognizes handwritten digits and letters. Various models were evaluated on the classic MNIST dataset. A convolutional neural network was also evaluated on the EMNIST MNSIT combined with EMNIST letters dataset.
+
 ## Setup
 
 To install required dependencies, run `pip install -r requirements.txt`. 
@@ -16,6 +18,8 @@ To train models, datasets need to be downloaded first.
 
 Detailed information about datasets and data examples can be found in datasets.ipynb
 
+Final structure of dataset directories:
+
 ```
 % ls emnist_letters emnist_mnist 
 emnist_letters:
@@ -25,9 +29,28 @@ emnist_mnist:
 emnist-mnist-test-images-idx3-ubyte  emnist-mnist-test-labels-idx1-ubyte  emnist-mnist-train-images-idx3-ubyte  emnist-mnist-train-labels-idx1-ubyte
 ```
 
-## Usage
+## Usage examples
 
 Trained models can be downloaded from Github Releases. Model files should be put in the main directory of this project.
 
-All notebooks should contain a section called "Manual test". Code in this section should load a model and display a widget that allows user to draw a digit and see how the model classifies it. While this of course is not a good way to measure accuracy of any model, it allows users to quickly test models with natural input. It's of course recommended to use a graphic tablet (if possible) while testing the model.
+All notebooks with actual models contain a section called "Manual test". Code in this section loads a model and displays a widget that allows user to draw a digit and see how the model classifies it. While this of course is not a good way to measure accuracy of any model, it allows users to quickly test models with natural input. It's of course recommended to use a graphic tablet (if possible) while testing the model.
+
+### Notebooks
+
+#### Info
+
+* info.ipynb - sources and miscellaneous information about the project
+
+#### Models
+
+##### Digits and letters
+
+* cnn.ipynb - Convolutional Neural Network
+
+##### Digits
+
+* svm.ipynb - Support Vector Machines with deskewing
+* ova.ipynb - Simple one-vs-all logistic regression classifier
+* neural_network.ipynb - Dense neural network 
+* neural_network_2.ipynb - Dense neural network with dropout and batch normalization
 
