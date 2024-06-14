@@ -33,7 +33,7 @@ emnist-mnist-test-images-idx3-ubyte  emnist-mnist-test-labels-idx1-ubyte  emnist
 
 Trained models can be downloaded from Github Releases. Model files should be put in the main directory of this project.
 
-All notebooks with actual models contain a section called "Manual test". Code in this section loads a model and displays a widget that allows user to draw a digit and see how the model classifies it. While this of course is not a good way to measure accuracy of any model, it allows users to quickly test models with natural input. It's of course recommended to use a graphic tablet (if possible) while testing the model.
+Notebooks lenet5_digits.ipynb, lenet5_letters.ipynb and svm.ipynb contain a section called "Manual test". Code in this section loads a model and displays a widget that allows user to draw a digit and see how the model classifies it. While this of course is not a good way to measure accuracy of any model, it allows users to quickly test models with natural input. It's of course recommended to use a graphic tablet (if possible) while testing the models.
 
 ### Notebooks
 
